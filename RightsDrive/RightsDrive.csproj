@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F70786C3-F935-4F18-96C4-E92DE8502E71}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RightsRocket</RootNamespace>
+    <AssemblyName>RightsRocket</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ConsumeToken">
+      <HintPath>..\..\..\DCAuth\DCAuth\bin\Debug\ConsumeToken.dll</HintPath>
+    </Reference>
+    <Reference Include="DCAuth">
+      <HintPath>..\..\..\DCAuth\DCAuth\bin\Debug\DCAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.4.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\ChildController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\jwt-decode\build\jwt-decode.js" />
+    <Content Include="bower_components\jwt-decode\build\jwt-decode.min.js" />
+    <Content Include="bower_components\jwt-decode\Gruntfile.js" />
+    <Content Include="bower_components\jwt-decode\jwt-decode.html" />
+    <Content Include="bower_components\jwt-decode\lib\atob.js" />
+    <Content Include="bower_components\jwt-decode\lib\base64_url_decode.js" />
+    <Content Include="bower_components\jwt-decode\lib\index.js" />
+    <Content Include="bower_components\jwt-decode\standalone.js" />
+    <Content Include="bower_components\jwt-decode\test\tests.js" />
+    <Content Include="bower_components\jwt-decode\test_harness.html" />
+    <Content Include="bower_components\mousetrap\Gruntfile.js" />
+    <Content Include="bower_components\mousetrap\mousetrap.js" />
+    <Content Include="bower_components\mousetrap\mousetrap.min.js" />
+    <Content Include="bower_components\mousetrap\plugins\bind-dictionary\mousetrap-bind-dictionary.js" />
+    <Content Include="bower_components\mousetrap\plugins\bind-dictionary\mousetrap-bind-dictionary.min.js" />
+    <Content Include="bower_components\mousetrap\plugins\global-bind\mousetrap-global-bind.js" />
+    <Content Include="bower_components\mousetrap\plugins\global-bind\mousetrap-global-bind.min.js" />
+    <Content Include="bower_components\mousetrap\plugins\pause\mousetrap-pause.js" />
+    <Content Include="bower_components\mousetrap\plugins\pause\mousetrap-pause.min.js" />
+    <Content Include="bower_components\mousetrap\plugins\record\mousetrap-record.js" />
+    <Content Include="bower_components\mousetrap\plugins\record\mousetrap-record.min.js" />
+    <Content Include="bower_components\mousetrap\plugins\record\tests\index.html" />
+    <Content Include="bower_components\mousetrap\plugins\record\tests\jelly.css" />
+    <Content Include="bower_components\mousetrap\plugins\record\tests\jelly.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\chai-1.6.0.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\jquery-1.7.2.min.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\key-event.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\mocha-1.9.0.css" />
+    <Content Include="bower_components\mousetrap\tests\libs\mocha-1.9.0.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\sinon-1.7.1.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\sinon-chai-2.4.0.js" />
+    <Content Include="bower_components\mousetrap\tests\libs\sinon-ie-1.7.1.js" />
+    <Content Include="bower_components\mousetrap\tests\mousetrap.html" />
+    <Content Include="bower_components\mousetrap\tests\test.mousetrap.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\7.jpg" />
+    <Content Include="Content\images\home1.jpg" />
+    <Content Include="Content\images\home2.jpg" />
+    <Content Include="Content\images\loading-spinner-grey.gif" />
+    <Content Include="Content\koparion\404.html" />
+    <Content Include="Content\koparion\about.html" />
+    <Content Include="Content\koparion\audio\Ami_Raji.mp3" />
+    <Content Include="Content\koparion\blog-details.html" />
+    <Content Include="Content\koparion\blog.html" />
+    <Content Include="Content\koparion\cart.html" />
+    <Content Include="Content\koparion\checkout.html" />
+    <Content Include="Content\koparion\contact.html" />
+    <Content Include="Content\koparion\css\animate.css" />
+    <Content Include="Content\koparion\css\bootstrap.min.css" />
+    <Content Include="Content\koparion\css\chosen-sprite.png" />
+    <Content Include="Content\koparion\css\chosen.min.css" />
+    <Content Include="Content\koparion\css\flexslider.css" />
+    <Content Include="Content\koparion\css\font-awesome.min.css" />
+    <Content Include="Content\koparion\css\jquery-ui.min.css" />
+    <Content Include="Content\koparion\css\meanmenu.min.css" />
+    <Content Include="Content\koparion\css\owl.carousel.css" />
+    <Content Include="Content\koparion\css\responsive.css" />
+    <Content Include="Content\koparion\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\koparion\img\1.png" />
+    <Content Include="Content\koparion\img\2.png" />
+    <Content Include="Content\koparion\img\3.jpg" />
+    <Content Include="Content\koparion\img\author\1.jpg" />
+    <Content Include="Content\koparion\img\author\2.jpg" />
+    <Content Include="Content\koparion\img\author\3.jpg" />
+    <Content Include="Content\koparion\img\author\4.jpg" />
+    <Content Include="Content\koparion\img\banner\1.png" />
+    <Content Include="Content\koparion\img\banner\10.jpg" />
+    <Content Include="Content\koparion\img\banner\11.jpg" />
+    <Content Include="Content\koparion\img\banner\12.jpg" />
+    <Content Include="Content\koparion\img\banner\13.jpg" />
+    <Content Include="Content\koparion\img\banner\14.jpg" />
+    <Content Include="Content\koparion\img\banner\15.jpg" />
+    <Content Include="Content\koparion\img\banner\16.jpg" />
+    <Content Include="Content\koparion\img\banner\17.jpg" />
+    <Content Include="Content\koparion\img\banner\18.jpg" />
+    <Content Include="Content\koparion\img\banner\19.jpg" />
+    <Content Include="Content\koparion\img\banner\2.png" />
+    <Content Include="Content\koparion\img\banner\20.jpg" />
+    <Content Include="Content\koparion\img\banner\21.jpg" />
+    <Content Include="Content\koparion\img\banner\22.jpg" />
+    <Content Include="Content\koparion\img\banner\23.jpg" />
+    <Content Include="Content\koparion\img\banner\24.jpg" />
+    <Content Include="Content\koparion\img\banner\25.jpg" />
+    <Content Include="Content\koparion\img\banner\26.jpg" />
+    <Content Include="Content\koparion\img\banner\27.jpg" />
+    <Content Include="Content\koparion\img\banner\28.jpg" />
+    <Content Include="Content\koparion\img\banner\29.jpg" />
+    <Content Include="Content\koparion\img\banner\3.png" />
+    <Content Include="Content\koparion\img\banner\30.jpg" />
+    <Content Include="Content\koparion\img\banner\31.jpg" />
+    <Content Include="Content\koparion\img\banner\32.jpg" />
+    <Content Include="Content\koparion\img\banner\33.jpg" />
+    <Content Include="Content\koparion\img\banner\38.jpg" />
+    <Content Include="Content\koparion\img\banner\4.png" />
+    <Content Include="Content\koparion\img\banner\5.jpg" />
+    <Content Include="Content\koparion\img\banner\5.png" />
+    <Content Include="Content\koparion\img\banner\6.jpg" />
+    <Content Include="Content\koparion\img\banner\7.jpg" />
+    <Content Include="Content\koparion\img\banner\8.jpg" />
+    <Content Include="Content\koparion\img\banner\9.jpg" />
+    <Content Include="Content\koparion\img\blog\1.jpg" />
+    <Content Include="Content\koparion\img\blog\2.jpg" />
+    <Content Include="Content\koparion\img\blog\3.jpg" />
+    <Content Include="Content\koparion\img\blog\4.jpg" />
+    <Content Include="Content\koparion\img\blog\5.jpg" />
+    <Content Include="Content\koparion\img\blog\6.jpg" />
+    <Content Include="Content\koparion\img\cart\1.jpg" />
+    <Content Include="Content\koparion\img\cart\2.jpg" />
+    <Content Include="Content\koparion\img\favicon.png" />
+    <Content Include="Content\koparion\img\flag\1.jpg" />
+    <Content Include="Content\koparion\img\flag\2.jpg" />
+    <Content Include="Content\koparion\img\flag\3.jpg" />
+    <Content Include="Content\koparion\img\flex\1.jpg" />
+    <Content Include="Content\koparion\img\flex\2.jpg" />
+    <Content Include="Content\koparion\img\flex\3.jpg" />
+    <Content Include="Content\koparion\img\flex\4.jpg" />
+    <Content Include="Content\koparion\img\flex\5.jpg" />
+    <Content Include="Content\koparion\img\icon-img\select-2.png" />
+    <Content Include="Content\koparion\img\icon-img\select.png" />
+    <Content Include="Content\koparion\img\icon-img\service-1-white.png" />
+    <Content Include="Content\koparion\img\icon-img\service-1.png" />
+    <Content Include="Content\koparion\img\icon-img\service-2-white.png" />
+    <Content Include="Content\koparion\img\icon-img\service-2.png" />
+    <Content Include="Content\koparion\img\icon-img\service-3-white.png" />
+    <Content Include="Content\koparion\img\icon-img\service-3.png" />
+    <Content Include="Content\koparion\img\logo\2.png" />
+    <Content Include="Content\koparion\img\logo\3.png" />
+    <Content Include="Content\koparion\img\logo\4.png" />
+    <Content Include="Content\koparion\img\logo\5.png" />
+    <Content Include="Content\koparion\img\logo\logo.png" />
+    <Content Include="Content\koparion\img\map.png" />
+    <Content Include="Content\koparion\img\post\1.jpg" />
+    <Content Include="Content\koparion\img\post\2.jpg" />
+    <Content Include="Content\koparion\img\post\3.jpg" />
+    <Content Include="Content\koparion\img\post\4.jpg" />
+    <Content Include="Content\koparion\img\product\1.jpg" />
+    <Content Include="Content\koparion\img\product\10.jpg" />
+    <Content Include="Content\koparion\img\product\11.jpg" />
+    <Content Include="Content\koparion\img\product\12.jpg" />
+    <Content Include="Content\koparion\img\product\13.jpg" />
+    <Content Include="Content\koparion\img\product\14.jpg" />
+    <Content Include="Content\koparion\img\product\15.jpg" />
+    <Content Include="Content\koparion\img\product\16.jpg" />
+    <Content Include="Content\koparion\img\product\17.jpg" />
+    <Content Include="Content\koparion\img\product\18.jpg" />
+    <Content Include="Content\koparion\img\product\19.jpg" />
+    <Content Include="Content\koparion\img\product\2.jpg" />
+    <Content Include="Content\koparion\img\product\20.jpg" />
+    <Content Include="Content\koparion\img\product\21.jpg" />
+    <Content Include="Content\koparion\img\product\22.jpg" />
+    <Content Include="Content\koparion\img\product\23.jpg" />
+    <Content Include="Content\koparion\img\product\24.jpg" />
+    <Content Include="Content\koparion\img\product\25.jpg" />
+    <Content Include="Content\koparion\img\product\26.jpg" />
+    <Content Include="Content\koparion\img\product\27.jpg" />
+    <Content Include="Content\koparion\img\product\28.jpg" />
+    <Content Include="Content\koparion\img\product\29.jpg" />
+    <Content Include="Content\koparion\img\product\3.jpg" />
+    <Content Include="Content\koparion\img\product\4.jpg" />
+    <Content Include="Content\koparion\img\product\5.jpg" />
+    <Content Include="Content\koparion\img\product\6.jpg" />
+    <Content Include="Content\koparion\img\product\7.jpg" />
+    <Content Include="Content\koparion\img\product\8.jpg" />
+    <Content Include="Content\koparion\img\product\9.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-l1.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-l2.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-l3.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-l4.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-l5.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-s2.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-s3.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-s4.jpg" />
+    <Content Include="Content\koparion\img\product\quickview-s5.jpg" />
+    <Content Include="Content\koparion\img\slider\1.jpg" />
+    <Content Include="Content\koparion\img\slider\10.jpg" />
+    <Content Include="Content\koparion\img\slider\11.jpg" />
+    <Content Include="Content\koparion\img\slider\12.jpg" />
+    <Content Include="Content\koparion\img\slider\13.jpg" />
+    <Content Include="Content\koparion\img\slider\2.jpg" />
+    <Content Include="Content\koparion\img\slider\3.jpg" />
+    <Content Include="Content\koparion\img\slider\4.jpg" />
+    <Content Include="Content\koparion\img\slider\5.jpg" />
+    <Content Include="Content\koparion\img\slider\6.jpg" />
+    <Content Include="Content\koparion\img\slider\7.jpg" />
+    <Content Include="Content\koparion\img\slider\8.jpg" />
+    <Content Include="Content\koparion\img\slider\9.jpg" />
+    <Content Include="Content\koparion\img\team\1.jpg" />
+    <Content Include="Content\koparion\img\team\2.jpg" />
+    <Content Include="Content\koparion\img\team\3.jpg" />
+    <Content Include="Content\koparion\img\team\4.jpg" />
+    <Content Include="Content\koparion\img\thum-2\1.jpg" />
+    <Content Include="Content\koparion\img\thum-2\2.jpg" />
+    <Content Include="Content\koparion\img\thum-2\3.jpg" />
+    <Content Include="Content\koparion\img\thum-2\4.jpg" />
+    <Content Include="Content\koparion\img\thum-2\5.jpg" />
+    <Content Include="Content\koparion\index-2.html" />
+    <Content Include="Content\koparion\index-3.html" />
+    <Content Include="Content\koparion\index-4.html" />
+    <Content Include="Content\koparion\index-5.html" />
+    <Content Include="Content\koparion\index-6.html" />
+    <Content Include="Content\koparion\index.html" />
+    <Content Include="Content\koparion\js\ajax-mail.js" />
+    <Content Include="Content\koparion\js\bootstrap.min.js" />
+    <Content Include="Content\koparion\js\chosen.jquery.min.js" />
+    <Content Include="Content\koparion\js\jquery-ui.min.js" />
+    <Content Include="Content\koparion\js\jquery.countdown.min.js" />
+    <Content Include="Content\koparion\js\jquery.counterup.min.js" />
+    <Content Include="Content\koparion\js\jquery.flexslider.js" />
+    <Content Include="Content\koparion\js\jquery.meanmenu.js" />
+    <Content Include="Content\koparion\js\jquery.parallax-1.1.3.js" />
+    <Content Include="Content\koparion\js\main.js" />
+    <Content Include="Content\koparion\js\owl.carousel.min.js" />
+    <Content Include="Content\koparion\js\plugins.js" />
+    <Content Include="Content\koparion\js\popper.min.js" />
+    <Content Include="Content\koparion\js\vendor\jquery-1.12.0.min.js" />
+    <Content Include="Content\koparion\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Content\koparion\js\waypoints.min.js" />
+    <Content Include="Content\koparion\js\wow.min.js" />
+    <Content Include="Content\koparion\login.html" />
+    <Content Include="Content\koparion\mail.php" />
+    <Content Include="Content\koparion\product-details.html" />
+    <Content Include="Content\koparion\register.html" />
+    <Content Include="Content\koparion\shop.html" />
+    <Content Include="Content\koparion\style.css" />
+    <Content Include="Content\koparion\wishlist.html" />
+    <Content Include="Content\logo.jpg" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="favicon.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\koparion\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\koparion\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\koparion\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\koparion\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\koparion\fonts\FontAwesome.otf" />
+    <Content Include="bower_components\jwt-decode\.bower.json" />
+    <Content Include="bower_components\jwt-decode\.gitignore" />
+    <Content Include="bower_components\jwt-decode\bower.json" />
+    <Content Include="bower_components\jwt-decode\LICENSE" />
+    <Content Include="bower_components\mousetrap\.bower.json" />
+    <Content Include="bower_components\mousetrap\.gitignore" />
+    <Content Include="bower_components\mousetrap\LICENSE" />
+    <Content Include="bower_components\mousetrap\package.json" />
+    <Content Include="bower_components\mousetrap\plugins\bind-dictionary\README.md" />
+    <Content Include="bower_components\mousetrap\plugins\global-bind\README.md" />
+    <Content Include="bower_components\mousetrap\plugins\pause\README.md" />
+    <Content Include="bower_components\mousetrap\plugins\README.md" />
+    <Content Include="bower_components\mousetrap\plugins\record\README.md" />
+    <Content Include="bower_components\mousetrap\README.md" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\DClib.js" />
+    <Content Include="Scripts\infinite-scroll.pkgd.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\pagination.min.js" />
+    <Content Include="Scripts\rightsrocket\misc.js" />
+    <Content Include="Scripts\rightsrocket\product.js" />
+    <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Scripts\tinymce\license.txt" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\colorpicker\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\colorpicker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\imagetools\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\imagetools\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\quickbars\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textpattern\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\textpattern\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\toc\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\toc\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Scripts\tinymce\skins\content\default\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\default\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\document\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\document\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\content\writer\content.css" />
+    <Content Include="Scripts\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.inline.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.mobile.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\content.mobile.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.mobile.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide-dark\skin.mobile.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.inline.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.mobile.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\content.mobile.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.mobile.css" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\skin.mobile.min.css" />
+    <Content Include="Scripts\tinymce\themes\mobile\theme.js" />
+    <Content Include="Scripts\tinymce\themes\mobile\theme.min.js" />
+    <Content Include="Scripts\tinymce\themes\silver\theme.js" />
+    <Content Include="Scripts\tinymce\themes\silver\theme.min.js" />
+    <Content Include="Scripts\tinymce\tinymce.js" />
+    <Content Include="Scripts\tinymce\tinymce.min.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\typeahead.bundle.min.js" />
+    <Content Include="Scripts\typeahead.jquery.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\tinymce\langs\readme.md" />
+    <Content Include="Scripts\tinymce\skins\ui\oxide\fonts\tinymce-mobile.woff" />
+    <Content Include="Views\Category\Category.cshtml" />
+    <Content Include="Views\Child\SideBar.cshtml" />
+    <Content Include="Views\Book\BookProfile.cshtml" />
+    <Content Include="Views\Home\Howitworks.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52087</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52087/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

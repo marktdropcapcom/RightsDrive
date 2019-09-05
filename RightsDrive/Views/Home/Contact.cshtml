@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<!-- home-main-area-start -->
+<div class="home-main-area mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="contact-info">
+                    <h3>Contact info</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <span>Address: </span><br />
+                            <div style="margin-left:30px;">
+                                701 Washington Ave. N. Ste. 111<br />
+                                Minneapolis, MN 55401<br />
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>Phone: </span>
+                            612-355-3023
+                        </li>
+                        <li>
+                            <i class="fa fa-mobile"></i>
+                            <span>Email: </span>
+                            <a href="#">info@rightsrocket.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="contact-form">
+                    <h3><i class="fa fa-envelope-o"></i>Leave a Message</h3>
+                    <form id="contact-form">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label>Name</label>
+                                <div class="single-form-3">
+                                    <input id="FullName" type="text" placeholder="Your Full Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <label>Company</label>
+                                <div class="single-form-3">
+                                    <input id="Company" type="text" placeholder="Company / Publisher Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <label>I'm Interested In:</label>
+                                <div class="single-form-3">
+                                    <select id="OrgType" style="height:30px; width:300px; margin-bottom:13px;">
+                                        <option value="">Choose One</option>
+                                        <option value="Sell Rights">Selling Rights</option>
+                                        <option value="Buy Rights">Buying Rights</option>
+                                        <option value="Both BuySell Rights">Both Buying & Selling Rights</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <label>Email:</label>
+                                <div class="single-form-3">
+                                    <input id="Email" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="single-form-3">
+                                    <textarea id="Message" placeholder="Message" style="height:150px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group form-group-default">
+                                    <div class="g-recaptcha" data-sitekey="6LdbjaYUAAAAANs7W--d5I6W6_lLvmcuDgiCu0I3"></div>
+                                    <br />
+                                    <button id="SendMessageButton" class="btn btn-info" style="width:150px;">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- home-main-area-end -->
+
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="~/Scripts/toastr.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#ContactNav").addClass("active");
+
+            // ON DOCUMENT.READY PAGE LOAD
+            pageLoad();
+            
+        });
+
+        function pageLoad() {
+            $('#SendMessageButton').click(function (e) {
+                e.preventDefault();
+                var deferred = $.Deferred();
+
+
+                if (DCWebServiceURL == "https://api.dropcap.com") {
+                    var response = grecaptcha.getResponse();
+                    if (response.length == 0) {
+                        //reCaptcha not verified
+                        toastr.error("Please Check I'm not a Robot.", "Error");
+                        return false;
+                    }
+                }
+
+                sendContactEmail();
+
+                return deferred.promise();
+            });
+        }
+
+        function sendContactEmail() {
+
+            var deferred = $.Deferred();
+
+            if ($("#FullName").val() == "") {
+                toastr.error(" Must Include an Name.", "Error");
+                return false;
+            }
+            if ($("#OrgType").val() == "") {
+                toastr.error(" Must Include Interest.", "Error");
+                return false;
+            }
+            if ($("#Email").val() == "") {
+                toastr.error(" Must Include an Email.", "Error");
+                return false;
+            }
+
+            var data = {
+                client_id: client_id_val,
+                Email: $("#Email").val(),
+                Name: $("#FullName").val(),
+                Company: $("#Company").val(),
+                OrgType: $("#OrgType").val(),
+                Message: $("#Message").val()
+            };
+
+            var args = {
+                ajaxUrl: DCWebServiceURL + "/api/rh/contactform",
+                headers: bearerHeader,
+                htmlMethod: "POST",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                pushData: data //JSON.stringify(data)
+            };
+            var rowHTML = "";
+
+            var ajaxPromise = DKAjax(args)
+                .done(function (data) {
+                    toastr.success("Your message as been sent. Thank you, we will be in touch.", "Success");
+                    deferred.resolve();
+                })
+                .fail(function (xhr, status, request) {
+                    toastr.error("Error Loading", "Error");
+                    deferred.resolve();
+                });
+        }
+    </script>
+}

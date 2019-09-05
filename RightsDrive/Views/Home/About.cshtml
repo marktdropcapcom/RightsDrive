@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "About Rights Rocket";
+}
+
+<!-- home-main-area-start -->
+<div class="home-main-area mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h1>@ViewBag.Title.</h1>
+
+
+                <p>
+                    RightsRocket is a U.S.-based platform for independently published authors and small presses (with less than five titles) to showcase their books to foreign language rights buyers. These buyers are publishers outside North America looking to acquire the translation rights to books that they publish, market, and distribe. It is in every sense a traditional publishing relationship, where an author is paid an advance and a royalty on future sales.
+                </p>
+                <p>
+                    RightsRocket is a division of DropCap LLC, which is a foreign rights literary agency that has built proprietary technology to manage the marketing, licensing, and royalties for a number of book publishing companies. Book publishers with more than five titles that are interested in foreign rights representation, should contact DropCap.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- home-main-area-end -->
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            $("#AboutNav").addClass("active");
+
+            // ON DOCUMENT.READY PAGE LOAD
+            pageLoad();
+
+        });
+
+        function pageLoad() {           
+        }
+    </script>
+}

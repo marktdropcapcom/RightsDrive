@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Rights Rocket</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Rufina:400,700" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="\favicon.png">
+    <!-- all css here -->
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="~/Content/koparion/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="~/Content/koparion/css/animate.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="~/Content/koparion/css/meanmenu.min.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="~/Content/koparion/css/owl.carousel.css">
+    <!-- font-awesome css -->
+    <link rel="stylesheet" href="~/Content/koparion/css/font-awesome.min.css">
+    <!-- flexslider.css-->
+    <link rel="stylesheet" href="~/Content/koparion/css/flexslider.css">
+    <!-- chosen.min.css-->
+    <link rel="stylesheet" href="~/Content/koparion/css/chosen.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="~/Content/koparion/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/Content/koparion/css/responsive.css">
+    <link rel="stylesheet" href="~/Content/toastr.min.css" rel="stylesheet" />
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="home-4">
+    <!--[if lt IE 8]>
+           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+       <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- header-area-start -->
+    <header>
+        <!-- header-top-area-start -->
+        <div class="header-top-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="language-area">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="account-area text-right" style="display:none;">
+                            <ul>
+                                <li><a href="register.html">My Account</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="login.html">Sign in</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-top-area-end -->
+        <!-- header-mid-area-start -->
+        <div class="header-mid-area ptb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <div class="logo-area">
+                            <a href="/"><img src="/content/logo.jpg" alt="logo" /></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 col-12" style="padding-left:50px;">
+                        <div class="header-search">
+                            <form action="#">
+                                <input id="SearchBar" type="text" placeholder="Search by title name ..." />
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-12">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-mid-area-end -->
+        <!-- main-menu-area-start -->
+        <div class="main-menu-area d-md-none d-none d-lg-block" id="header-sticky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="menu-area">
+                            <nav>
+                                <ul>
+                                    <li id="HomeNav"><a href="/">Home</a></li>
+                                    <li id="BookNav">
+                                        <a href="#">Books<i class="fa fa-angle-down"></i></a>
+                                        <div class="mega-menu" style="z-index:1002;">
+                                            <span>
+                                                <a href="#" class="title">Non-Fiction</a>
+                                                <a href="/category/Automotive">Automotive</a>
+                                                <a href="/category/Biographies-Memoirs">Biographies / Memoirs</a>
+                                                <a href="/category/Body-Mind-Spirit">Body, Mind & Spirit</a>
+                                                <a href="/category/Business-Career">Business & Career</a>
+                                                <a href="/category/Family-Parenting">Family & Parenting</a>
+                                                <a href="/category/Health-Fitness">Health & Fitness</a>
+                                                <a href="/category/House-Home">House & Home</a>
+                                                <a href="/category/Humor">Humor</a>
+                                                <a href="/category/LGBTQ">LGBTQ</a>
+                                                <a href="/category/Self-Help">Self-Help</a>
+                                                <a href="/category/Sexuality-Nonfiction">Sexuality Nonfiction</a>
+                                                <a href="/category/Sports-Recreation">Sports & Recreation</a>
+                                                <a href="/category/Religion-Christian-Living">Religion - Christian Living</a>
+                                                <a href="/category/Resources-for-Teachers">Resources for Teachers</a>
+                                                <a href="/category/Young-Adult-Nonfiction">Young Adult Nonfiction</a>
+                                            </span>
+                                            <span>
+                                                <a href=">" class="title">Fiction</a>
+
+
+
+                                                <a href="/category/Fantasy">Fantasy</a>
+                                                <a href="/category/Erotica">Erotica</a>
+                                                <a href="/category/Middle-Grade-Fiction-General">Middle Grade Fiction </a>
+                                                <a href="/category/Romance">Romance</a>
+                                                <a href="/category/Science-Fiction">Science Fiction</a>
+
+                                                <a href="/category/Thrillers">Thrillers</a>
+                                                <a href="/category/Travel">Travel</a>
+                                                <a href="/category/Young-Adult-Fiction-General">Young Adult Fiction </a>
+
+
+                                            </span>
+                                            <span>
+                                                <a href=">" class="title">Children</a>
+                                                <a href="/category/Childrens-Beginning-Readers"> Beginning Readers</a>
+                                                <a href="/category/Childrens-Character-Development"> Character Development</a>
+                                                <a href="/category/Childrens-Early-Learning-Concepts"> Early Learning & Concepts</a>
+                                                <a href="/category/Childrens-Health-Daily-Living"> Health & Daily Living</a>
+                                                <a href="/category/Childrens-Illustrated-Picture-Books"> Illustrated Picture Books</a>
+
+
+                                            </span>
+                                            <span>
+                                                <a href=">" class="title">Juvenile</a>
+
+                                                <a href="/category/Juvenile-Nonfiction-Animals">  Animals</a>
+                                                <a href="/category/Juvenile-Nonfiction-Arts-Crafts-Makerspace">Arts, Crafts & Makerspace</a>
+                                                <a href="/category/Juvenile-Nonfiction-Biographies"> Biographies</a>
+                                                <a href="/category/Juvenile-Nonfiction-General"> General</a>
+                                                <a href="/category/Juvenile-Graphic-Novels-Comics"> Graphic Novels & Comics</a>
+                                                <a href="/category/Juvenile-Nonfiction-Language-Arts"> Language Arts</a>
+                                                <a href="/category/Juvenile-Nonfiction-Math"> Math</a>
+                                                <a href="/category/Juvenile-Nonfiction-Science-Nature"> Science & Nature</a>
+                                                <a href="/category/Juvenile-Nonfiction-Sports"> Sports</a>
+                                                <a href="/category/Juvenile-Nonfiction-Technology"> Technology</a>
+                                            </span>
+
+                                        </div>
+                                    </li>
+                                    <!--<li><a href="shop.html">Enable Cookies</a></li>
+    <li>
+        <a href="product-details">pages<i class="fa fa-angle-down"></i></a>
+        <div class="sub-menu sub-menu-2">
+            <ul>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="shop.html">product-details</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="blog-details.html">blog-details</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="login.html">login</a></li>
+                <li><a href="register.html">register</a></li>
+                <li><a href="cart.html">cart</a></li>
+                <li><a href="checkout.html">checkout</a></li>
+                <li><a href="wishlist.html">wishlist</a></li>
+                <li><a href="404.html">404 Page</a></li>
+            </ul>
+        </div>
+    </li>
+        -->
+                                    <li id="HowNav"><a href="/home/howitworks">How it Works</a></li>
+                                    <li id="AboutNav"><a href="/home/about">about</a></li>
+                                    <li id="ContactNav"><a href="/home/contact">contact</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main-menu-area-end -->
+        <!-- mobile-menu-area-start -->
+        <div class="mobile-menu-area d-lg-none d-block fix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="mobile-menu">
+                            <nav id="mobile-menu-active">
+                                <ul id="nav">
+                                    <li>
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li><a href="shop.html">Enable Cookies</a></li>
+                                    <li>
+                                        <a href="product-details.html">Pages</a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="product-details.html">product-details</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog-details.html">blog-details</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="checkout.html">Checkout</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="login.html">Login</a></li>
+                                            <li><a href="register.html">Register</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="404.html">404 Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/home/about">about</a></li>
+                                    <li><a href="/home/contact">contact</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-menu-area-end -->
+    </header>
+    <div id="bodyHTML">
+        @RenderBody()
+        <hr />
+        <footer>
+            <!-- footer-top-start -->
+            <div class="footer-top">
+            </div>
+            <!-- footer-top-start -->
+            <!-- footer-mid-start -->
+            <div class="footer-mid ptb-50">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-12">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="single-footer br-2 xs-mb">
+                                        <div class="footer-title mb-20">
+                                            <h3>Titles</h3>
+                                        </div>
+                                        <div class="footer-mid-menu">
+                                            <ul>
+                                                <li><a href="/home/about">About Us</a></li>
+                                                <li><a href="/home/howitworks">How It Works</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="single-footer br-2 xs-mb">
+                                        <div class="footer-title mb-20">
+                                            <h3>Our company</h3>
+                                        </div>
+                                        <div class="footer-mid-menu">
+                                            <ul>
+                                                <li><a href="/home/contact">Contact us</a></li>
+                                                <li><a href="/home/about">About us </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-12">
+                                    <div class="single-footer br-2 xs-mb">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-12">
+                            <div class="single-footer mrg-sm">
+                                <div class="footer-title mb-20">
+                                    <h3>INFORMATION</h3>
+                                </div>
+                                <div class="footer-contact">
+                                    <p class="address">
+                                        <span>RightsRocket <br />(Powered By Dropcap)</span><br />
+                                        701 Washington Ave. N. Ste. 111<br />
+                                        Minneapolis, MN 55401
+                                    </p>
+                                    <p><span>Phone:</span> 612-355-3023</p>
+                                    <p><span>Email:</span>  info@rightsrocket.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-mid-end -->
+            <!-- footer-bottom-start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row bt-2">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="copy-right-area">
+                                <p>Copyright &copy; @DateTime.Now.Year, DropCap Rights Agency </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="payment-img text-right">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom-end -->
+
+        </footer>
+    </div>
+
+
+    <!-- all js here -->
+    <!-- jquery latest version -->
+    <script src="~/Content/koparion/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    @Scripts.Render("~/bundles/bower")
+
+    <!-- popper js -->
+    <script src="~/Content/koparion/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/Content/koparion/js/bootstrap.min.js"></script>
+
+    <!-- owl.carousel js -->
+    <script src="~/Content/koparion/js/owl.carousel.min.js"></script>
+    <!-- meanmenu js -->
+    <script src="~/Content/koparion/js/jquery.meanmenu.js"></script>
+    <!-- wow js -->
+    <script src="~/Content/koparion/js/wow.min.js"></script>
+    <!-- jquery.parallax-1.1.3.js -->
+    <script src="~/Content/koparion/js/jquery.parallax-1.1.3.js"></script>
+    <!-- jquery.countdown.min.js -->
+    <script src="~/Content/koparion/js/jquery.countdown.min.js"></script>
+    <!-- jquery.flexslider.js -->
+    <script src="~/Content/koparion/js/jquery.flexslider.js"></script>
+    <!-- chosen.jquery.min.js -->
+    <script src="~/Content/koparion/js/chosen.jquery.min.js"></script>
+    <!-- jquery.counterup.min.js -->
+    <script src="~/Content/koparion/js/jquery.counterup.min.js"></script>
+    <!-- waypoints.min.js -->
+    <script src="~/Content/koparion/js/waypoints.min.js"></script>
+    <!-- plugins js -->
+    <script src="~/Content/koparion/js/plugins.js"></script>
+    
+
+    <script src="~/Scripts/toastr.min.js"></script>
+    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
+    <script src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
+
+    @Scripts.Render("~/bundles/dropcaplib")
+
+
+    <script>
+        var accessToken = getAccessTokenFromStorage();
+        var bearerHeader = {};
+        bearerHeader.Authorization = 'Bearer ' + accessToken;
+        var roleAccess = "";
+        var AvatarImgExist;
+        var IsLoggedInAdmin = 0;
+        var LoggedInUserID = 0;
+        var IsPublisher = 0;
+        var LoggedInOrgName = "";
+
+        $(document).ready(function () {
+            $("#SearchBar").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: DCWebServiceURL + "/api/rh/title/search?term=" + request.term,
+                        headers: bearerHeader,
+                        htmlMethod: "GET",
+                        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                        data: {
+                            client_id: client_id_val
+                        },
+                        success: function (data) {
+                            response(data);
+                        }
+                    });
+                },
+                minLength: 3,
+                select: function (event, ui) {
+                    
+                     window.location.href = "/book/" + ui.item.value;
+                    
+                    //console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
+                }
+            }).autocomplete("instance")._renderItem = function (ul, item) {
+                if (item.category == "Product") {
+                    return $("<li>")
+                        .append("<div><i class='fa fa-book'></i> " + item.label + "</div>")
+                        .appendTo(ul);
+                }
+                else {
+                    return $("<li>")
+                        .append("<div><i class='fa fa-users'></i> " + item.label + "</div>")
+                        .appendTo(ul);
+                }
+            };
+        });
+
+
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

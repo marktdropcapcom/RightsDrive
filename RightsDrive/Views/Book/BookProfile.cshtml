@@ -1,0 +1,305 @@
+﻿@{
+    ViewBag.Title = "Book";
+}
+
+<style>
+    .subtitle {
+        font-size: 17px;
+        font-weight: normal;
+    }
+
+    #SeriesName {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    #TitleName {
+        margin-top: 0px;
+    }
+</style>
+
+
+<!-- product-main-area-start -->
+<div class="product-main-area mb-70" style="margin-top:25px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- product-main-area-start -->
+                <div class="product-main-area">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-12">
+                            <div class="flexslider">
+                                <ul id="CoverImgSlides" class="slides"></ul>
+                            </div>
+                            <div style="margin:10px;">
+                                <i class="fa fa-envelope-o" style="font-size:25px;float:left; margin-right:5px;"></i> <a id="ContactRightsLink" href="#" style="font-size:14px; line-height:26px; "> Inquire About Rights</a>
+                            </div>
+                            <div style="margin:10px;">
+                                <i class="fa fa-file-pdf-o" style="font-size:25px;float:left; padding-left:2px; margin-right:5px;"></i> <a id="ContactManuLink" href="#" style="font-size:14px; line-height:26px; "> Request Manuscript</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-12">
+                            <div class="row">
+                                <div id="product-info-main" class="product-info-main col-12">
+                                    <div class="page-title">
+                                        <h1 id="TitleName">Book</h1>
+                                        <h2 id="SubTitle" class="subtitle"></h2>
+
+                                        <h2 id="Contributors" class="subtitle"></h2>
+                                        <h3 id="SeriesName" class=""></h3>
+                                    </div>
+
+                                    <br />
+                                    <div class="product-social-links">
+
+                                        <div id="Desc" class="product-addto-links-text">
+                                            <p>Powerwalking to the gym or strolling to the local coffeehouse, the Savvy Shoulder Tote lets you stash your essentials in sporty style! A top-loading compartment provides quick and easy access to larger items, while zippered pockets on the front and side hold cash, credit cards and phone.</p>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="product-info-stock-sku">
+                                        <div class="product-attribute">
+                                            <span>Pubish Date</span>
+                                            <span id="PubDate" class="value"></span>
+                                        </div>
+                                        <div class="product-attribute">
+                                            <span>ISBN</span>
+                                            <span id="ISBN13" class="value"></span>
+                                        </div>
+                                        <div class="product-attribute">
+                                            <span>Format</span>
+                                            <span id="Format" class="value"></span>
+                                        </div>
+                                        <div class="product-attribute">
+                                            <span>Pages</span>
+                                            <span id="Pages" class="value"></span>
+                                        </div>
+                                        <br />
+
+                                    </div>
+                                    <br />
+                                    <div id="Contracts-Container">
+                                        <span style="font-size:15px; font-weight:bold;">Rights Sold (All ISBNs)</span>
+                                        <table style="width:99%">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width:50%; ">Language</th>
+                                                    <th style="width:50%;">Countries</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="LangCountryTableBody" class="linkTable"></tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="product-reviews-summary" style="display:none;">
+                                        <div class="rating-summary">
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                            <a href="#"><i class="fa fa-star"></i></a>
+                                        </div>
+                                        <div class="reviews-actions">
+                                            <a href="#">3 Reviews</a>
+                                            <a href="#" class="view">Add Your Review</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- product-info-area-start -->
+                                    <div id="BookExtras" class="" style="display:none; margin-top:50px;">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav">
+                                            <li id="AboutTab"><a href="#AboutAuthor">About Author</a></li>
+                                            <li id="ReviewTab"><a href="#Reviews">Reviews</a></li>
+                                        </ul>
+                                        <div id="AboutAuthor" style="display:none;">
+
+                                        </div>
+                                        <div id="Reviews" style="display:none;">
+
+                                        </div>
+                                    </div>
+                                    <!-- product-info-area-end -->
+                                </div>
+                                <div id="SeriesTitles">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- product-main-area-end -->
+
+
+            </div>
+            <div class="col-lg-3 col-md-12 col-12 order-lg-2 order-2">
+                <div class="shop-left">
+                    &nbsp;
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- product-main-area-end -->
+<!-- modalContactSlideUp Model Slideup -->
+<div id="modalContactSlideUp" class="modal fade slide-up disable-scroll" style="z-index:1100;">
+    <div class="modal-dialog" style="min-width:700px;">
+        <div class="modal-content-wrapper" style="">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-left">
+                    <h4 id="" style=" font-weight:bold;">Inquire About Great Titles</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>                    
+                </div>
+                <div class="modal-body" style="margin-top:10px;">
+                    <div class="row">
+                        <div class="col-4">
+                            <div id="CoverImg"></div>
+                        </div>
+                        <div class="col-8">
+                            <form role="form" id="EditionDescForm" class="">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group form-group-default">
+                                                <label>Title</label>
+                                                <div class="controls">
+                                                    <input type="text" id="ReqTitle" placeholder="Title Name" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group form-group-default">
+                                                <label>Name</label>
+                                                <div class="controls">
+                                                    <input type="text" id="FullName" placeholder="Your Name" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group form-group-default">
+                                                <label>Email</label>
+                                                <div class="controls">
+                                                    <input type="text" id="Email" placeholder="Your Email" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group form-group-default">
+                                                <label>I'm Interested</label>
+                                                <div class="controls">
+                                                    <select id="Interest" class="form-control">
+                                                        <option value="PurchasingRights">Purchasing Rights</option>
+                                                        <option value="Manuscript">Reviewing Manuscript</option>
+                                                        <option value="PurchasingRightsAndManuscript">Purchasing Rights &amp; Manuscript</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin-top:15px;">
+                                        <div class="col-lg-12 " style=" padding-right:12px; text-align:right;">
+                                            <button id="SendReqButton" type="button" class="btn btn-primary btn-cons m-t-10" style="width:150px;">Send Request</button> <button id="CloseButton" type="button" class="btn btn-complete btn-cons m-t-10" style="width:150px;">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Search Model Slideup-->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/RHproduct")
+    <script src="/content/koparion/js/jquery.flexslider.js"></script>
+
+    <script>
+
+        var BookSlug ="@ViewData["Slug"]";
+        var ProductID = 0;
+
+        $(document).ready(function () {
+            $("#BookNav").addClass("active");
+            getBookHTML();
+            $("#BookExtras").tabs();
+
+
+            $("#ContactRightsLink").click(function () {
+                $('#modalContactSlideUp').modal('show');
+            });
+            $("#ContactManuLink").click(function () {
+                $('#modalContactSlideUp').modal('show');
+            });
+            $("#CloseButton").click(function () {
+                $('#modalContactSlideUp').modal('hide');
+            });
+            $("#SendReqButton").click(function () {
+                sendInterstEmail();
+            });
+        });
+
+
+        function sendInterstEmail() {
+
+            var deferred = $.Deferred();
+
+            if ($("#ReqTitle").val() == "") {
+                toastr.error(" Must Include Title Name.", "Error");
+                return false;
+            }
+            if ($("#FullName").val() == "") {
+                toastr.error(" Must Include an Name.", "Error");
+                return false;
+            }
+            if ($("#Interest").val() == "") {
+                toastr.error(" Must Include Interest.", "Error");
+                return false;
+            }
+            if ($("#Email").val() == "") {
+                toastr.error(" Must Include an Email.", "Error");
+                return false;
+            }
+
+            var data = {
+                client_id: client_id_val,
+                Email: $("#Email").val(),
+                FullName: $("#FullName").val(),
+                Interest: $("#Interest").val(),
+                ReqTitle: $("#ReqTitle").val()
+            };
+
+            var args = {
+                ajaxUrl: DCWebServiceURL + "/api/rh/interestform",
+                headers: bearerHeader,
+                htmlMethod: "POST",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                pushData: data //JSON.stringify(data)
+            };
+            var rowHTML = "";
+
+            var ajaxPromise = DKAjax(args)
+                .done(function (data) {
+                    toastr.success("Your Request has been sent. Thank you, we will be in touch.", "Success");
+                    deferred.resolve();
+                })
+                .fail(function (xhr, status, request) {
+                    toastr.error("Error Loading", "Error");
+                    deferred.resolve();
+                });
+        }
+
+
+    </script>
+}

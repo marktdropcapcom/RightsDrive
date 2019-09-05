@@ -1,0 +1,372 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .homelist {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .homelist-li {
+        padding-left: 1em;
+        text-indent: -.7em;
+        margin-bottom: 8px;
+        font-size: 17px;
+    }
+
+    .homelist-li::before {
+        content: "• ";
+        color: red; /* or whatever color you prefer */
+    }
+</style>
+<!-- slider-group-start -->
+<div class="slider-group  mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <!-- slider-area-start -->
+                <div class="slider-area">
+                    <div class="slider-active owl-carousel">
+                        <div class="single-slider slider-hm4-1 pt-154 pb-154 bg-img" style="background-image:url(/content/images/home1.jpg);">
+                            <div class="slider-content-4 slider-animated-1 pl-40" style="height:170px;">
+                                <h1>Looking to Buy or Sell Foreign Language Rights?</h1>
+                                <h2 style="font-size:45px;"> We connect 1,000+ global rights buyers with authors and publishers</h2>
+                                <a href="#">Learn more</a>
+
+                            </div>
+                        </div>
+                        <div class="single-slider pt-154 pb-154 bg-img" style="background-image:url(/content/images/home2.jpg);">
+                            <div class="slider-content-4 slider-animated-1 pl-40">
+                                <h1>Sale up to 30% off</h1>
+                                <h2>Books in Order</h2>
+                                <a href="#">Shopping now!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- slider-area-end -->
+            </div>
+        </div>
+        <div class="row" style="margin-top:40px;">
+            <div class="section-title-2  col-6">
+                <h3>Authors and Publishers</h3>
+                <ul class="homelist">
+                    <li class="homelist-li">Make your book(s) <b>discoverable</b> to our active network of 1,000+ publishing rights buyers from 120+ countries.</li>
+                    <li class="homelist-li">
+                        Gain opportunities to <b>license</b> the translation rights to your book(s) in more than 180+ languages.
+                    </li>
+                    <li class="homelist-li">
+                        Safely and securely review <b>licensing</b> inquiries.
+                    </li>
+                    <li class="homelist-li">
+                        Optimize your <b>rights page</b> to rank higher in search engines.
+                    </li>
+                    <li class="homelist-li">
+                        Get help managing, tracking, and the disbursement of <B>royalties</B> for foreign rights sales
+                    </li>
+                </ul>
+                <button class="btn btn-success">LEARN MORE</button>
+            </div>
+            <div class="section-title-2 col-6">
+                <h3>Rights Buyers</h3>
+                <ul class="homelist">
+                    <li class="homelist-li">Discover new titles from <b>established</b> publishers and first-time authors before your competitors</li>
+                    <li class="homelist-li">Get customized updates when titles <b>matching your rights criteria</b> are available</li>
+                    <li class="homelist-li">
+                        Instantly <b>download</b> the full PDF of titles
+                    </li>
+
+                    <li class="homelist-li"><b>Negotiate contracts quickly</b> and efficiently without endless emails</li>
+                </ul>
+                <button class="btn btn-success">DISCOVER RIGHTS</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider-group-end -->
+<!-- home-main-area-start -->
+<div class="home-main-area mt-30" style="margin-top:70px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-12" style="border: 0px solid #000;">
+                @{Html.RenderAction("SideBar", "Child"); }
+
+            </div>
+            
+            <div class="col-lg-9 col-md-8 col-12">
+               
+                <!-- new-book-area-start -->
+                <div class="new-book-area ">
+                    <div class="section-title-2 title-big bt pt-50 mb-30">
+                        <h3>Newest Books</h3>
+                    </div>
+                    <div id="HotBooksContainerLoading" class="" style="height:200px; width:100%; text-align:center;">
+                        <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
+                    </div>
+                    <div id="HotBooksContainer" class="tab-active-3 owl-carousel" style="height:400px;">
+                        <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
+                    </div>
+                </div>
+                <!-- new-book-area-start -->
+                <!-- hot-sell-area-2-start -->
+                <div class="hot-sell-area-2 pb-50">
+                    <div class="section-title-2 title-big bt pt-50 mb-30">
+                        <h3>Recently Sold</h3>
+                    </div>
+                    <div id="SoldBooksContainerLoading" class="" style="height:200px; width:100%; text-align:center;">
+                        <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
+                    </div>
+                    <div id="SoldBooksContainer" class="tab-active-4 owl-carousel" style="height:400px;">
+                        
+                    </div>
+                </div>
+                <!-- hot-sell-area-2-end -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- home-main-area-end -->
+<br /><br />
+<!-- social-group-area-start -->
+<div class="social-group-area ptb-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="section-title-3">
+                    <h3>Latest Tweets</h3>
+                </div>
+                <div class="twitter-content">
+                    <div class="twitter-icon">
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="twitter-text">
+                        <p>
+                            Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum notare quam
+                        </p>
+                        <a href="#">posthemes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="section-title-3">
+                    <h3>Stay Connected</h3>
+                </div>
+                <div class="link-follow">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- social-group-area-end -->
+@section Scripts {
+    <script src="~/Content/koparion/js/main.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#HomeNav").addClass("active");
+
+            // ON DOCUMENT.READY PAGE LOAD
+            pageLoad();
+
+        });
+
+        function pageLoad() {
+            //App.blockUI();
+
+            // log out user
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("cart");
+
+            // add validation to form
+            //basicFormValidate($("#LoginForm"));
+            getNewestTitlesHTML();
+            getLatestSoldTitlesHTML();
+            //App.unblockUI();
+        }
+        function getNewestTitlesHTML() {
+
+            var deferred = $.Deferred();
+            
+            var data = {
+                client_id: client_id_val
+            };
+
+            var args = {
+                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/newest",
+                headers: bearerHeader,
+                htmlMethod: "GET",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                pushData: data //JSON.stringify(data)
+            };
+            var rowHTML = "";
+
+            var ajaxPromise = DKAjax(args)
+                .done(function (data) {
+                    $("#HotBooksContainerLoading").hide();
+                    var len = data.length;
+                    for (var i = 0; i < len; i++) {
+                        //-- get special html --
+                        var SpecialHtml = "";
+                        var img = "";
+                        //console.log("sdf"+i);
+
+                        if (data[i].mostRecentCoverUrl != "")
+                            img = "<img src='" + data[i].mostRecentCoverUrl + "' style='height:300px;width:200px;' />";
+
+                        rowHTML = rowHTML + '<div class="tab-total" style="width:205px !important;">' +
+                            '<div class="product-wrapper mb-25" style="width:205px !important;">' +
+                            '<div class="product-img1">' +
+                            '<a href="/book/' + data[i].slug + '">' + img + '</a>' +
+                            '<div class="quick-view">'+
+                                '<a class="action-view" href="/book/' + data[i].slug + '"><i class="fa fa-search-plus"></i></a>'+
+                            '</div>'+
+                            '<div class="product-flag" > ' +
+                            '<ul> ' +
+                            '<li> <span class="sale">new</span></li> ' +
+                            '</ul> ' +
+                            '</div > ' +
+                            '</div > ' +
+                            '<div class="product-details text-center" > ' +
+                            '<h4><a href="/book/' + data[i].slug + '">' + data[i].name + '</a></h4> ' +
+                            '<div class="product-price" > ' +
+                            '<ul>' +
+                            '<li></li>' +
+                            '</ul> ' +
+                            '</div> ' +
+                            '</div> ' +
+                            '</div>' +
+                            '</div>';
+
+                    }
+
+                    $("#HotBooksContainer").html(rowHTML);
+                    $('.tab-active-3').owlCarousel({
+                        //smartSpeed: 1000,
+                        nav: true,
+                        //autoplay: true,
+                        //loop: true,
+                        margin: 10,
+                        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            900: {
+                                items: 3
+                            },
+                            1200: {
+                                items: 4
+                            }
+                        }
+                    })
+
+                    deferred.resolve();
+                })
+                .fail(function (xhr, status, request) {
+                    toastr.error("Error Loading", "Error");
+                    deferred.resolve();
+                });
+        }
+        function getLatestSoldTitlesHTML() {
+
+            var deferred = $.Deferred();
+
+            var data = {
+                client_id: client_id_val
+            };
+
+            var args = {
+                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/newest",
+                headers: bearerHeader,
+                htmlMethod: "GET",
+                contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                pushData: data //JSON.stringify(data)
+            };
+            var rowHTML = "";
+
+            var ajaxPromise = DKAjax(args)
+                .done(function (data) {
+                    $("#SoldBooksContainerLoading").hide();
+                    var len = data.length;
+                    for (var i = 0; i < len; i++) {
+                        //-- get special html --
+                        var SpecialHtml = "";
+                        var img = "";
+                        //console.log("sdf"+i);
+
+                        if (data[i].mostRecentCoverUrl != "")
+                            img = "<img src='" + data[i].mostRecentCoverUrl + "' style='height:300px;width:200px;' />";
+
+                        rowHTML = rowHTML + '<div class="tab-total" style="width:205px !important;">' +
+                            '<div class="product-wrapper mb-25" style="width:205px !important;">' +
+                            '<div class="product-img1">' +
+                            '<a href="/book/' + data[i].slug + '">' + img + '</a>' +
+                            '<div class="quick-view">' +
+                            '<a class="action-view" href="/book/' + data[i].slug + '"><i class="fa fa-search-plus"></i></a>' +
+                            '</div>' +
+                            '<div class="product-flag" > ' +
+                            '<ul> ' +
+                            '<li> <span class="sale">new</span></li> ' +
+                            '</ul> ' +
+                            '</div > ' +
+                            '</div > ' +
+                            '<div class="product-details text-center" > ' +
+                            '<h4><a href="/book/' + data[i].slug + '">' + data[i].name + '</a></h4> ' +
+                            '<div class="product-price" > ' +
+                            '<ul>' +
+                            '<li></li>' +
+                            '</ul> ' +
+                            '</div> ' +
+                            '</div> ' +
+                            '</div>' +
+                            '</div>';
+
+                    }
+
+                    $("#SoldBooksContainer").html(rowHTML);
+                    $('.tab-active-4').owlCarousel({
+                        //smartSpeed: 1000,
+                        nav: true,
+                        //autoplay: true,
+                        //loop: true,
+                        margin: 10,
+                        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 2
+                            },
+                            900: {
+                                items: 3
+                            },
+                            1200: {
+                                items: 4
+                            }
+                        }
+                    })
+
+                    deferred.resolve();
+                })
+                .fail(function (xhr, status, request) {
+                    toastr.error("Error Loading", "Error");
+                    deferred.resolve();
+                });
+        }
+    </script>
+}
