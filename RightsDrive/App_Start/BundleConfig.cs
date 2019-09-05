@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace RightsRocket
+namespace RightsDrive
 {
     public class BundleConfig
     {
@@ -36,7 +36,7 @@ namespace RightsRocket
                         "~/bower_components/jwt-decode/build/jwt-decode.js"
             ));
             bundles.Add(new ScriptBundle("~/bundles/RHproduct").Include(
-                        "~/Scripts/rightsrocket/product.js"
+                        "~/Scripts/rightsdrive/product.js"
             ));
         }
     }

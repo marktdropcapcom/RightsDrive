@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace RightsRocket
+namespace RightsDrive
 {
     public class FilterConfig
     {

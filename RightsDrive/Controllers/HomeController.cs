@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace RightsRocket.Controllers
+namespace RightsDrive.Controllers
 {
     public class HomeController : Controller
     {
