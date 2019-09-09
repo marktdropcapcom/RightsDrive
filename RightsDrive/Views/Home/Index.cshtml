@@ -28,21 +28,15 @@
                 <!-- slider-area-start -->
                 <div class="slider-area">
                     <div class="slider-active owl-carousel">
-                        <div class="single-slider slider-hm4-1 pt-154 pb-154 bg-img" style="background-image:url(/content/images/home1.jpg);">
+                        <div class="single-slider slider-hm4-1 pt-154 pb-154 bg-img" style="background-image:url(/content/images/homeback1.jpg);">
                             <div class="slider-content-4 slider-animated-1 pl-40" style="height:170px;">
-                                <h1>Looking to Buy or Sell Foreign Language Rights?</h1>
-                                <h2 style="font-size:45px;"> We connect 1,000+ global rights buyers with authors and publishers</h2>
-                                <a href="#">Learn more</a>
+                                <h1 style="font-family: 'Open Sans', sans-serif;">Looking to Buy or Sell Foreign Language Rights?</h1>
+                                <h2 style="font-size:45px;font-family: 'Open Sans', sans-serif;"> We connect 1,000+ global rights buyers with authors and publishers</h2>
+                                <a href="#" style="font-family: 'Open Sans', sans-serif;">Learn more</a>
 
                             </div>
                         </div>
-                        <div class="single-slider pt-154 pb-154 bg-img" style="background-image:url(/content/images/home2.jpg);">
-                            <div class="slider-content-4 slider-animated-1 pl-40">
-                                <h1>Sale up to 30% off</h1>
-                                <h2>Books in Order</h2>
-                                <a href="#">Shopping now!</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- slider-area-end -->
@@ -85,20 +79,22 @@
     </div>
 </div>
 <!-- slider-group-end -->
+
 <!-- home-main-area-start -->
-<div class="home-main-area mt-30" style="margin-top:70px;">
+<div class="home-main-area mt-30" style="margin-top:40px;">
+    
     <div class="container">
+
+        <hr style=" border-top:1px solid #e5e5e5; width:100%; margin-bottom:35px;" />
         <div class="row">
             <div class="col-lg-3 col-md-4 col-12" style="border: 0px solid #000;">
                 @{Html.RenderAction("SideBar", "Child"); }
-
             </div>
-            
             <div class="col-lg-9 col-md-8 col-12">
-               
+
                 <!-- new-book-area-start -->
                 <div class="new-book-area ">
-                    <div class="section-title-2 title-big bt pt-50 mb-30">
+                    <div class="section-title-2 title-big bt pt-50 mb-30" style="margin-top:0px; border:0px; padding-top:0px;">
                         <h3>Newest Books</h3>
                     </div>
                     <div id="HotBooksContainerLoading" class="" style="height:200px; width:100%; text-align:center;">
@@ -118,11 +114,10 @@
                         <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
                     </div>
                     <div id="SoldBooksContainer" class="tab-active-4 owl-carousel" style="height:400px;">
-                        
                     </div>
                 </div>
                 <!-- hot-sell-area-2-end -->
-                
+
             </div>
         </div>
     </div>
