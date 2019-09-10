@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "FAQ";
+}
+
+<!-- home-main-area-start -->
+<div class="home-main-area mt-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <h1>@ViewBag.Title</h1>
+
+                <h3>What are Foreign Language Rights?</h3>
+                <p>
+                    The foreign language rights (AKA “translation rights”) are part of a bundle of subsidiary rights that copyright holders can sell, license or otherwise transfer. Foreign language rights are one of the many subsidiary rights a copyright holder controls and can monetize. Other rights include movie, TV, radio, streaming, etc.
+                </p>
+                <h3>What happens when a foreign publisher acquires rights to my book in another language?</h3>
+                <p>
+                    Once a license agreement is signed, the agreement between the rights seller (author) and the rights buyer (foreign publisher) becomes a traditional publishing contract, whereby the acquiring publisher pays the author an advance and royalties, and pays for all of the translation, design, marketing, printing, distribution and marketing of the book.
+                </p>
+                <p>
+                    The amount of any advance and/or royalty depend on the publishing norms in the specific country of the acquiring publisher, the language, and genre of the book. The “advance” is the up front payment that is counted against any royalties a book earns. The advance is yours to keep, regardless of sales of the new foreign edition of your book.
+                </p>
+                <p>
+                    Example: A Korean publisher licenses the rights to your children’s picture book. The publisher pays you an advance of $2,500.00 and then eight percent (8%) of the retail sales price for the term of the license (typically, five years). If the Korean version of the book sells for the equivalent of $10.00 USD, the other earns $.80 on each sale. In order to earn back the advance, the Korean publisher must sell 3,125 copies of your book ($2500 / $.80). Starting with copy 3,126, you again start earning $.80 per book. If the publisher doesn’t sell through the original 3,125 copies, the author (you) gets to keep the advance, but won’t earn any additional royalties.
+                </p>
+            </div>
+            <div class="col-4" style="text-align:center;">
+                <img src="~/Content/images/faq.jpg" style="" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- home-main-area-end -->
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            $("#FaqNav").addClass("active");
+
+            // ON DOCUMENT.READY PAGE LOAD
+            pageLoad();
+
+        });
+
+        function pageLoad() {           
+        }
+    </script>
+}

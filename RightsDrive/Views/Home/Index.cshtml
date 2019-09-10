@@ -104,16 +104,15 @@
                         <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
                     </div>
                 </div>
-                <!-- new-book-area-start -->
-                <!-- hot-sell-area-2-start -->
-                <div class="hot-sell-area-2 pb-50">
+                <div class="new-book-area ">
                     <div class="section-title-2 title-big bt pt-50 mb-30">
-                        <h3>Recently Sold</h3>
+                        <h3>Recently Licensed</h3>
                     </div>
                     <div id="SoldBooksContainerLoading" class="" style="height:200px; width:100%; text-align:center;">
                         <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
                     </div>
-                    <div id="SoldBooksContainer" class="tab-active-4 owl-carousel" style="height:400px;">
+                    <div id="SoldBooksContainer" class="tab-active-3 owl-carousel" style="height:400px;">
+                        <img src='/Content/images/loading-spinner-grey.gif' style='width:100px; margin-left:auto;margin-right:auto;' />
                     </div>
                 </div>
                 <!-- hot-sell-area-2-end -->
@@ -185,7 +184,7 @@
 
             // add validation to form
             //basicFormValidate($("#LoginForm"));
-            getNewestTitlesHTML();
+            
             getLatestSoldTitlesHTML();
             //App.unblockUI();
         }
@@ -242,11 +241,11 @@
                             '</div> ' +
                             '</div>' +
                             '</div>';
-
+                        //rowHTML = rowHTML + '<div>' + img+'</div>';
                     }
 
                     $("#HotBooksContainer").html(rowHTML);
-                    $('.tab-active-3').owlCarousel({
+                    $('.owl-carousel').owlCarousel({
                         //smartSpeed: 1000,
                         nav: true,
                         //autoplay: true,
@@ -285,7 +284,7 @@
             };
 
             var args = {
-                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/newest",
+                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/latestsold",
                 headers: bearerHeader,
                 htmlMethod: "GET",
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -297,6 +296,7 @@
                 .done(function (data) {
                     $("#SoldBooksContainerLoading").hide();
                     var len = data.length;
+                    rowHTML = "";
                     for (var i = 0; i < len; i++) {
                         //-- get special html --
                         var SpecialHtml = "";
@@ -306,56 +306,38 @@
                         if (data[i].mostRecentCoverUrl != "")
                             img = "<img src='" + data[i].mostRecentCoverUrl + "' style='height:300px;width:200px;' />";
 
-                        rowHTML = rowHTML + '<div class="tab-total" style="width:205px !important;">' +
-                            '<div class="product-wrapper mb-25" style="width:205px !important;">' +
-                            '<div class="product-img1">' +
-                            '<a href="/book/' + data[i].slug + '">' + img + '</a>' +
-                            '<div class="quick-view">' +
-                            '<a class="action-view" href="/book/' + data[i].slug + '"><i class="fa fa-search-plus"></i></a>' +
-                            '</div>' +
-                            '<div class="product-flag" > ' +
-                            '<ul> ' +
-                            '<li> <span class="sale">new</span></li> ' +
-                            '</ul> ' +
-                            '</div > ' +
-                            '</div > ' +
-                            '<div class="product-details text-center" > ' +
-                            '<h4><a href="/book/' + data[i].slug + '">' + data[i].name + '</a></h4> ' +
-                            '<div class="product-price" > ' +
-                            '<ul>' +
-                            '<li></li>' +
-                            '</ul> ' +
-                            '</div> ' +
-                            '</div> ' +
-                            '</div>' +
+                        rowHTML = rowHTML +
+                            '<div class="tab-total" style="width:205px !important;">' +
+                                '<div class="product-wrapper mb-25" style="width:205px !important;">' +
+                                    '<div class="product-img1">' +
+                                        '<a href="/book/' + data[i].slug + '">' + img + '</a>' +
+                                        '<div class="quick-view">' +
+                                            '<a class="action-view" href="/book/' + data[i].slug + '"><i class="fa fa-search-plus"></i></a>' +
+                                        '</div>' +
+                                        '<div class="product-flag" > ' +
+                                            '<ul> ' +
+                                            '<li> <span class="sale">RIGHTS SOLD</span></li> ' +
+                                            '</ul> ' +
+                                        '</div> ' +
+                                    '</div> ' +
+                                    '<div class="product-details text-center" > ' +
+                                        '<h4><a href="/book/' + data[i].slug + '">' + data[i].name + '</a></h4> ' +
+                                        '<div class="product-price" > ' +
+                                            '<ul>' +
+                                                '<li></li>' +
+                                            '</ul> ' +
+                                        '</div> ' +
+                                    '</div> ' +
+                                '</div> ' +
                             '</div>';
-
+                        //rowHTML = rowHTML +
+                        //    '<div class="owl-section" style="">'+img+'</div>';
                     }
 
                     $("#SoldBooksContainer").html(rowHTML);
-                    $('.tab-active-4').owlCarousel({
-                        //smartSpeed: 1000,
-                        nav: true,
-                        //autoplay: true,
-                        //loop: true,
-                        margin: 10,
-                        navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-                        responsive: {
-                            0: {
-                                items: 1
-                            },
-                            600: {
-                                items: 2
-                            },
-                            900: {
-                                items: 3
-                            },
-                            1200: {
-                                items: 4
-                            }
-                        }
-                    })
-
+                    
+                    getNewestTitlesHTML();
+                    
                     deferred.resolve();
                 })
                 .fail(function (xhr, status, request) {
