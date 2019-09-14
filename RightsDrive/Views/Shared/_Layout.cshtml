@@ -30,11 +30,24 @@
     <link rel="stylesheet" href="~/Content/koparion/style.css">
     <!-- responsive css -->
     <link rel="stylesheet" href="~/Content/koparion/css/responsive.css">
-    <link rel="stylesheet" href="~/Content/toastr.min.css"  />
+    <link rel="stylesheet" href="~/Content/toastr.min.css" />
     <style>
-        .topnavli {margin-right: 25px !important;}
+        .topnavli {
+            margin-right: 25px !important;
+        }
     </style>
     @Scripts.Render("~/bundles/modernizr")
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147717685-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-147717685-2');
+    </script>
+
 </head>
 <body class="home-4">
     <!--[if lt IE 8]>
@@ -215,6 +228,17 @@
             </div>
         </div>
         <!-- mobile-menu-area-end -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147717685-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-147717685-2');
+        </script>
+
     </header>
     <div id="bodyHTML">
         @RenderBody()

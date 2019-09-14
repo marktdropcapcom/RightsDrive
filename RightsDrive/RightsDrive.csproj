@@ -209,8 +209,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\7.jpg" />
     <Content Include="Content\images\about1.jpg" />
-    <Content Include="Content\images\home1.jpg" />
-    <Content Include="Content\images\home2.jpg" />
+    <Content Include="Content\images\faq.jpg" />
     <Content Include="Content\images\homeback1.jpg" />
     <Content Include="Content\images\howworks.jpg" />
     <Content Include="Content\images\loading-spinner-grey.gif" />
