@@ -16,6 +16,12 @@
     #TitleName {
         margin-top: 0px;
     }
+    .value { font-size:16px !important;}
+
+    .book-extra p {
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif !important;
+    }
 </style>
 
 
@@ -52,8 +58,8 @@
                                     <br />
                                     <div class="product-social-links">
 
-                                        <div id="Desc" class="product-addto-links-text">
-                                            <p>Powerwalking to the gym or strolling to the local coffeehouse, the Savvy Shoulder Tote lets you stash your essentials in sporty style! A top-loading compartment provides quick and easy access to larger items, while zippered pockets on the front and side hold cash, credit cards and phone.</p>
+                                        <div id="Desc" class="product-addto-links-text" style="font-size:16px;">
+                                            <p></p>
                                         </div>
                                     </div>
                                     <br />
@@ -112,10 +118,10 @@
                                             <li id="AboutTab"><a href="#AboutAuthor">About Author</a></li>
                                             <li id="ReviewTab"><a href="#Reviews">Reviews</a></li>
                                         </ul>
-                                        <div id="AboutAuthor" style="display:none;">
+                                        <div id="AboutAuthor" class="book-extra" style="display:none; font-size:13px;font-family: 'Open Sans', sans-serif !important;">
 
                                         </div>
-                                        <div id="Reviews" style="display:none;">
+                                        <div id="Reviews" class="book-extra" style="display:none; font-size:13px;font-family: 'Open Sans', sans-serif !important;">
 
                                         </div>
                                     </div>
@@ -291,7 +297,7 @@
 
             var ajaxPromise = DKAjax(args)
                 .done(function (data) {
-                    toastr.success("Your Request has been sent. Thank you, we will be in touch.", "Success");
+                    toastr.success("Request sent. We will be in touch.", "Success");
                     deferred.resolve();
                 })
                 .fail(function (xhr, status, request) {
