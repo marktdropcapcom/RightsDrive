@@ -430,7 +430,7 @@
             
 
             var args = {
-                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/category?DashboardUserID=0&OnlyFavorites=0&CategoryName="+CatName,
+                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/category?DashboardUserID=0&EventID=0&OnlyFavorites=0&CategoryName="+CatName,
                 headers: bearerHeader,
                 htmlMethod: "GET",
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -504,7 +504,9 @@
                     deferred.resolve();
                 })
                 .fail(function (xhr, status, request) {
-                    toastr.error("Error Loading", "Error");
+                    //toastr.error("Error Loading", "Error");
+
+
                     deferred.resolve();
                 });
         }
@@ -518,7 +520,7 @@
 
 
             var args = {
-                ajaxUrl: DCWebServiceURL + "/api/rh/dashboard/category/name?CategoryName=" + CatName,
+                ajaxUrl: DCWebServiceURL + "/api/rh/category/namecheck?CategoryName=" + CatName,
                 headers: bearerHeader,
                 htmlMethod: "GET",
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",

@@ -401,6 +401,7 @@
     <Content Include="Content\koparion\wishlist.html" />
     <Content Include="Content\logo.jpg" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="Error404.html" />
     <Content Include="favicon.ico" />
     <Content Include="favicon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

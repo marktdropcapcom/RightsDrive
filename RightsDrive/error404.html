@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - RightsDrive</title>
+    <title>404 Error - RightsDrive</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Rufina:400,700" rel="stylesheet">
 
@@ -13,24 +13,24 @@
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="~/Content/koparion/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/koparion/css/bootstrap.min.css">
     <!-- animate css -->
-    <link rel="stylesheet" href="~/Content/koparion/css/animate.css">
+    <link rel="stylesheet" href="/Content/koparion/css/animate.css">
     <!-- meanmenu css -->
-    <link rel="stylesheet" href="~/Content/koparion/css/meanmenu.min.css">
+    <link rel="stylesheet" href="/Content/koparion/css/meanmenu.min.css">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="~/Content/koparion/css/owl.carousel.css">
+    <link rel="stylesheet" href="/Content/koparion/css/owl.carousel.css">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="~/Content/koparion/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Content/koparion/css/font-awesome.min.css">
     <!-- flexslider.css-->
-    <link rel="stylesheet" href="~/Content/koparion/css/flexslider.css">
+    <link rel="stylesheet" href="/Content/koparion/css/flexslider.css">
     <!-- chosen.min.css-->
-    <link rel="stylesheet" href="~/Content/koparion/css/chosen.min.css">
+    <link rel="stylesheet" href="/Content/koparion/css/chosen.min.css">
     <!-- style css -->
-    <link rel="stylesheet" href="~/Content/koparion/style.css">
+    <link rel="stylesheet" href="/Content/koparion/style.css">
     <!-- responsive css -->
-    <link rel="stylesheet" href="~/Content/koparion/css/responsive.css">
-    <link rel="stylesheet" href="~/Content/toastr.min.css" />
+    <link rel="stylesheet" href="/Content/koparion/css/responsive.css">
+    <link rel="stylesheet" href="/Content/toastr.min.css" />
     <style>
         .topnavli {
             margin-right: 25px !important;
@@ -40,9 +40,7 @@
             font-size: 16px;
         }
     </style>
-    @Scripts.Render("~/bundles/modernizr")
-
-    
+   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124741772-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -68,15 +66,7 @@
                         <div class="language-area">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="account-area text-right" style="display:none;">
-                            <ul>
-                                <li><a href="register.html">My Account</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="login.html">Sign in</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -92,10 +82,7 @@
                     </div>
                     <div class="col-lg-8 col-md-7 col-12" style="padding-left:50px; padding-top:10px;">
                         <div class="header-search">
-                            <form action="#">
-                                <input id="SearchBar" type="text" placeholder="Search by title name ..." />
-                                <a href="#"><i class="fa fa-search"></i></a>
-                            </form>
+                           
                         </div>
                     </div>
                     <div class="col-lg-1 col-md-1 col-12">
@@ -198,14 +185,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="mobile-menu">
-                            
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- mobile-menu-area-end -->
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147717685-2"></script>
         <script>
@@ -218,7 +204,26 @@
 
     </header>
     <div id="bodyHTML">
-        @RenderBody()
+        <style>
+            .howitworks li {
+                font-size: 16px !important;
+                margin-bottom: 10px;
+            }
+        </style>
+        <!-- home-main-area-start -->
+        <div class="home-main-area mt-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8" style="height:500px;">
+                        <h1>Page not found.</h1>
+                        <p>
+                            Sorry! We couldn't find the page you were looking for.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- home-main-area-end -->
         <hr />
         <footer>
             <!-- footer-top-start -->
@@ -307,97 +312,7 @@
     </div>
 
 
-    <!-- all js here -->
-    <!-- jquery latest version -->
-    <script src="~/Content/koparion/js/vendor/jquery-1.12.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
-    @Scripts.Render("~/bundles/bower")
-
-    <!-- popper js -->
-    <script src="~/Content/koparion/js/popper.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="~/Content/koparion/js/bootstrap.min.js"></script>
-
-    <!-- owl.carousel js -->
-    <script src="~/Content/koparion/js/owl.carousel.min.js"></script>
-    <!-- meanmenu js -->
-    <script src="~/Content/koparion/js/jquery.meanmenu.js"></script>
-    <!-- wow js -->
-    <script src="~/Content/koparion/js/wow.min.js"></script>
-    <!-- jquery.parallax-1.1.3.js -->
-    <script src="~/Content/koparion/js/jquery.parallax-1.1.3.js"></script>
-    <!-- jquery.countdown.min.js -->
-    <script src="~/Content/koparion/js/jquery.countdown.min.js"></script>
-    <!-- jquery.flexslider.js -->
-    <script src="~/Content/koparion/js/jquery.flexslider.js"></script>
-    <!-- chosen.jquery.min.js -->
-    <script src="~/Content/koparion/js/chosen.jquery.min.js"></script>
-    <!-- jquery.counterup.min.js -->
-    <script src="~/Content/koparion/js/jquery.counterup.min.js"></script>
-    <!-- waypoints.min.js -->
-    <script src="~/Content/koparion/js/waypoints.min.js"></script>
-    <!-- plugins js -->
-    <script src="~/Content/koparion/js/plugins.js"></script>
-    
-
-    <script src="~/Scripts/toastr.min.js"></script>
-    <script src="~/Scripts/tinymce/tinymce.min.js"></script>
-    <script src="~/Scripts/tinymce/jquery.tinymce.min.js"></script>
-
-    @Scripts.Render("~/bundles/dropcaplib")
-
-
-    <script>
-        var accessToken = getAccessTokenFromStorage();
-        var bearerHeader = {};
-        bearerHeader.Authorization = 'Bearer ' + accessToken;
-        var roleAccess = "";
-        var AvatarImgExist;
-        var IsLoggedInAdmin = 0;
-        var LoggedInUserID = 0;
-        var IsPublisher = 0;
-        var LoggedInOrgName = "";
-
-        $(document).ready(function () {
-            $("#SearchBar").autocomplete({
-                source: function (request, response) {
-                    $.ajax({
-                        url: DCWebServiceURL + "/api/rh/title/search?term=" + request.term,
-                        headers: bearerHeader,
-                        htmlMethod: "GET",
-                        contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-                        data: {
-                            client_id: client_id_val
-                        },
-                        success: function (data) {
-                            response(data);
-                        }
-                    });
-                },
-                minLength: 3,
-                select: function (event, ui) {
-                    
-                     window.location.href = "/book/" + ui.item.value;
-                    
-                    //console.log("Selected: " + ui.item.value + " aka " + ui.item.id);
-                }
-            }).autocomplete("instance")._renderItem = function (ul, item) {
-                if (item.category == "Product") {
-                    return $("<li>")
-                        .append("<div><i class='fa fa-book'></i> " + item.label + "</div>")
-                        .appendTo(ul);
-                }
-                else {
-                    return $("<li>")
-                        .append("<div><i class='fa fa-users'></i> " + item.label + "</div>")
-                        .appendTo(ul);
-                }
-            };
-        });
-
-
-    </script>
-    @RenderSection("scripts", required: false)
+   
 </body>
 </html>
